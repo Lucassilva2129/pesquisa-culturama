@@ -13,36 +13,21 @@
     <h1>Pesquisa Online</h1>
   </header>
   <section>
-    <fieldset> <!-- "CRIA UMA DIVISÃO E UMA BORDA"fieldset usamos para um conjunto de assunto relacionado, esses elementos tem relação entre si  -->
-      <!-- DADOS PESSOAIS -->
-      <legend>DADOS PESSOAIS</legend> <!--COLOCA O TEXTO NA BORDA DA fieldset-->
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Perfil</legend>
+        <p>Gênero:</p>
+        <input type="radio" name="userGender" value="Feminino">
+        <label for="userGender">Feminino</label>
 
-      <form action="" method="get"> <!-- esse metodo (get) envia a informação para o back-end -->
+        <input type="radio" name="userGender" value="Masculino">
+        <label for="userGender">Masculino</label>
 
-        <label for="userName">Nome</label> <!-- usamos para fazer a descrição dos campos -->
+        <input type="radio" name="userGender" value="notInformed">
+        <label for="userGender">Prefiro não informar</label>
+      </fieldset>
 
-        <input type="text" name="userName" required> <!-- recebeu a estiqueta userName na label acima e required de este item é obrigatorio o preenchimento -->
-        <br>
-        <label for="useAge">Idade</label>
-
-        <input type="number" name="useAge" min="12" max="100" required> <!-- min e max = idade minina e idade maxima -->
-        <br>
-        <label for="bithDate">Data de nascimento</label>
-        <input type="date" name="bithDate" id="">
-        <br>
-        <label for="userEmail">E-mail</label>
-        <input type="email" name="userEmail" required>
-        <br>
-        <label for="userPhoneNumber">Telefone</label>
-        <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD + número sem simbolos/espaço"> <!-- entre [] os digitos aceitos {} a quantidade de digitos -->
-        <br>
-        <label for="userImage">Upload de foto</label>
-        <input type="file" accept="image/*" name="userImage">
-
-    </fieldset>
-
-    <button type="submit">Enviar</button> <!-- submit -> vai submeter as nossa informações para algum lugar -->
-
+      <button type="submit">Enviar</button> <!-- submit -> vai submeter as nossa informações para algum lugar -->
     </form>
   </section>
 </body>
