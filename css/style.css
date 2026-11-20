@@ -32,6 +32,7 @@ form {
   background-color: #ffffff;
   padding: 15px;
   border-radius: 10px;
+  margin-bottom: 100px;
 }
 
 fieldset {
@@ -51,6 +52,12 @@ label {
   display: inline-block;
   margin-bottom: 5px;
 }
+
+p {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
 input,
 select,
 textarea {
@@ -65,7 +72,7 @@ textarea {
   min-height: 100px;
 }
 
-input[type="radio"],
+input[type="radio"], /* especificando qu esses inputs não ocupam 100% da tela */
 input[type="checkbox"] {
   width: auto;
 }
@@ -73,4 +80,36 @@ input[type="checkbox"] {
 input[type="color"] {
   width: 40px;
   padding: 0 5px;
+}
+
+input:invalid,
+label:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:valid,
+label:valid,
+textarea:valid {
+  border-color: green;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  margin-right: 10px;
+  border-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: green;
+  color: #ffffff;
+}
+
+button[type="reset"]:hover {
+  background-color: red;
+  color: #ffffff;
 }
